@@ -1,25 +1,73 @@
 // Add a subheading with js
 
-document.querySelector("#subheading").innerHTML = "Good for Your Heart"
+// DOM -- Document Object Model
+
+var bodyElement = document.querySelector("body")
+
+console.log(bodyElement)
+
+var subheadingElement = document.querySelector("#subheading")
+console.log(subheadingElement)
+
+subheadingElement.innerHTML = "Good for your heart"
+
+var greeting = "Hello, world"
+
+document.querySelector("#hello-container").innerHTML = greeting
+
 
 // LIGHTNING EXERCISE
 
-// Print a single bean menu item to the DOM
+// Print single menu items to the DOM
 var beansAndRice = {
     name: "Beans and rice",
     description: "Delicious",
     price: 4.99,
     img: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2007/12/7/1/IE0213_Red_Beans_and_Rice.jpg.rend.hgtvcom.826.620.suffix/1552488799980.jpeg"
 }
+
+var beansAndGreens = {
+    name: "Beans and greens",
+    description: "Collards or turnip greens",
+    price: 3.99,
+    img: "https://crackerbarrel.com/-/media/CrackerBarrel/Menu/Dinner/Specials/Beans_n_Greens_CB_Specialties_780x390.jpg?h=390&w=780&la=en&hash=C32C1113A7D723093A3B34453BF8EF71EE7C0254"
+}
+
+
 // How do we dig into the object? Log the name and description to the console
 
+console.log(beansAndRice.name, beansAndRice.description)
 
-// document.querySelector("#menu-container").innerHTML = `<div class="bean-menu-item">
+// document.querySelector("#menu-container").innerHTML = `<div class="menu-item">
 //     <h4>${beansAndRice.name}</h4>
 //     <p>${beansAndRice.description}</p>
 //     <p>${beansAndRice.price}</p>
-//     <img class="bean-img"  src=${beansAndRice.img} alt="Picture of beans" />
+//     <img class="beans-img" src=${beansAndRice.img} alt="Picture of beans" />
 // </div>`
+
+
+function printMenuItem(menuItemObject){
+    console.log("this is menuItemObject", menuItemObject)
+    document.querySelector("#menu-container").innerHTML += `<div class="menu-item">
+    <h4>${menuItemObject.name}</h4>
+    <p>${menuItemObject.description}</p>
+    <p>${menuItemObject.price}</p>
+    <img class="beans-img" src=${menuItemObject.img} alt="Picture of beans" />
+</div>`
+}
+
+// printMenuItem(beansAndRice)
+// printMenuItem(beansAndGreens)
+
+
+
+
+
+
+
+// We should make this a function! There's going to be more than one thing on the menu, so we want to reuse our code.
+
+
 
 
 
@@ -79,16 +127,11 @@ var beanMenu = [
     }
 ]
 
-function printMenuItem(menuItem){
-    console.log("This is menu item", menuItem)
-    document.querySelector("#menu-container").innerHTML += `<div class="bean-menu-item">
-    <h4>${menuItem.name}</h4>
-    <p>${menuItem.description}</p>
-    <p>${menuItem.price}</p>
-    <img class="bean-img"  src=${menuItem.img} alt="Picture of beans" />
-</div>`
-}
+// printMenuItem(beanMenu[0])
 
 for(var i = 0; i < beanMenu.length; i++){
+    console.log(beanMenu[i])
     printMenuItem(beanMenu[i])
 }
+
+
