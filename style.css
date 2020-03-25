@@ -1,0 +1,58 @@
+* {
+    font-family: 'Dosis', sans-serif;
+
+}
+
+body{
+    background-color: rgb(207, 230, 238)
+}
+
+h1, h2, h3, h4{
+    font-family: 'Fugaz One', cursive;
+    color: rgb(24, 62, 77);
+    margin: 0.5em;
+
+}
+
+header{
+    width: 70vw;
+    background-color: rgb(118, 139, 143);
+    margin: 2em auto;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2em;
+}
+
+img {
+    border-radius: 1em;
+}
+
+#menu-container{
+    width: 70vw;
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 1em;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bean-menu-item {
+    background-color: rgb(230, 230, 240);
+    width: 20%;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bean-img {
+    width: 7em;
+}
+
