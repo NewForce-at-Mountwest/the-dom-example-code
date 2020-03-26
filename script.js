@@ -135,3 +135,18 @@ for(var i = 0; i < beanMenu.length; i++){
 }
 
 
+// declare a variable called choresArray that holds some regular chores
+var choresArray = ["Take out the trash", "Wash dishes", "Disinfect EVERYTHING", "Cook some beans"]
+
+
+function printChore(singleChore){
+    document.querySelector("#chores-container").innerHTML += `<li>${singleChore}</li>`
+}
+
+// loop through my chores array and print an <li> element for each chore into #chores-container
+for(var i=0; i < choresArray.length; i++){
+    console.log(choresArray[i])
+    // document.querySelector("#chores-container").innerHTML += `<li>${choresArray[i]}</li>`
+    printChore(choresArray[i])
+}
+
